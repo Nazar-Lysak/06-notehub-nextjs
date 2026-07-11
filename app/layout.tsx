@@ -2,8 +2,8 @@
 
 // import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/app/components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 
