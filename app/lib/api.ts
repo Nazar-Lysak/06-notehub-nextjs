@@ -15,6 +15,8 @@ interface HandleSubmitInterface {
 const TOKEN = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
 const API_URL = "https://notehub-public.goit.study/api/notes";
 
+console.log(TOKEN)
+
 export const fetchNotes = async (note: string, page: number): Promise<FetchNotesResponse> => {
   const { data } = await axios.get<FetchNotesResponse>(API_URL, {
     params: {
