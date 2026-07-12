@@ -4,8 +4,7 @@
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useState } from "react";
+import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 
 // export const metadata: Metadata = {
 //   title: "Notehub",
@@ -17,16 +16,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [queryClient] = useState(() => new QueryClient());
   return (
     <html lang="en">
-      <QueryClientProvider client={queryClient}>
+      <TanStackProvider>
         <body className="min-h-full flex flex-col">
           <Header />
           {children}
           <Footer />
         </body>
-      </QueryClientProvider>
+      </TanStackProvider>
     </html>
   );
 }
