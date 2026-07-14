@@ -8,7 +8,7 @@ interface ModalProps {
 }
 
 function Modal({ onClose, children }: ModalProps) {
-  const modalRoot = document.getElementById("modal-root");
+  const modalRoot = document.body;
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
